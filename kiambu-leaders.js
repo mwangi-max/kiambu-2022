@@ -29,7 +29,10 @@ closeAsideBtn.addEventListener('click', ()=>{
 
 chevronIcons.forEach(icon =>{
     icon.addEventListener('click', ()=>{
-        icon.style.transform = 'rotate(180deg)'
+        icon.style.transform = 'rotate(180deg)';
+        if(!mcas.classList.contains('seen') || !mps.classList.contains('seen')){
+            icon.style.transform = 'rotate(0)';  
+        }
     })
 })
 
@@ -54,7 +57,6 @@ precedingElements.forEach(element =>{
         if(mcas.classList.contains('seen') || mps.classList.contains('seen')){
             mcas.classList.remove('seen');
             mps.classList.remove('seen');
-            icon.style.transform = 'rotate(0)'
         }
     })
 })
