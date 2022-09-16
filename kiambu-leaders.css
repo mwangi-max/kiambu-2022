@@ -239,10 +239,10 @@ figcaption{
 
 /* The sections detailing how each candidate performed */
 /* We'll give each section a height of 100vh and a width of 100% */
-#president{
+#president,#governor{
     height:100vh;
     width:100%;
-    padding-top:20px;
+    margin-top:20px;
 }
 .overflow{
     overflow-y: auto;
