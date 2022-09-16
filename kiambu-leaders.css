@@ -77,11 +77,11 @@ li{
     right:2%;
     height:200px;
     width:200px;
-    transform: translateX(200%);
-    transition: transform .4s linear;
+    display: none;
+    transition: display .4s ease-in-out;
 }
 .main-menu.show{
-    transform: translateX(0);
+    display: block;
     
 }
 .menu-btn{
