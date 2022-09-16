@@ -54,6 +54,7 @@ precedingElements.forEach(element =>{
         if(mcas.classList.contains('seen') || mps.classList.contains('seen')){
             mcas.classList.remove('seen');
             mps.classList.remove('seen');
+            icon.style.transform = 'rotate(0)'
         }
     })
 })
