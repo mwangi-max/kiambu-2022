@@ -9,6 +9,8 @@ const preloaderHeading = document.querySelector('.preloader-heading');
 const preloader = document.querySelector('.preloader');
 const floatingAd = document.querySelector('.floating-ad');
 const closeAsideBtn = document.querySelector('.close-aside-btn');
+const chevronIcons = document.querySelectorAll('.fa');
+
 
 window.addEventListener('load', ()=>{
     preloader.classList.add('hide');
@@ -25,17 +27,11 @@ closeAsideBtn.addEventListener('click', ()=>{
     }
 })
 
-var docWidth = document.documentElement.offsetWidth;
-
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
-  }
-);
-
+chevronIcons.forEach(icon =>{
+    icon.addEventListener('click', ()=>{
+        icon.style.transform = 'rotate(180deg)'
+    })
+})
 
 
 
