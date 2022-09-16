@@ -255,9 +255,11 @@ table{
 th,td{
     border:1px solid #181818;
     padding: 4px 8px;
+    text-align: center;
 }
 th{
     background:#8758ff;
+    color: #f2f2f2;
 }
 tr:nth-child(even){
     background:#5cb8e4;
