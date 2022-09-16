@@ -7,7 +7,8 @@ const mcas = document.querySelector('.mcas');
 const precedingElements = document.querySelectorAll('.pre');
 const preloaderHeading = document.querySelector('.preloader-heading');
 const preloader = document.querySelector('.preloader');
-const floatingAd = document.querySelector('.floating-ad')
+const floatingAd = document.querySelector('.floating-ad');
+const closeAsideBtn = document.querySelector('.close-aside-btn');
 
 window.addEventListener('load', ()=>{
     preloader.classList.add('hide');
@@ -17,6 +18,12 @@ window.addEventListener('load', ()=>{
      },20000)
     
 });
+
+closeAsideBtn.addEventListener('click', ()=>{
+    if(floatingAd.classList.contains('show')){
+        floatingAd.classList.remove('show');
+    }
+})
 
 
 
