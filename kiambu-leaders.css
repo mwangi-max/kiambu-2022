@@ -1,8 +1,31 @@
-*{
+html,body{
+    height:100vh;
+    width:100vw;
+    box-sizing: border-box;
     margin:0;
     padding:0;
-    box-sizing: border-box;
 }
+body{
+    background:yellow
+}
+img{
+    height:200px;
+    width:200px;
+}
+
+
+
+@media (max-width:500px) {
+    
+
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    overflow-x: hidden;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -13,14 +36,13 @@ a:hover{
     filter: brightness(0.9);
 }
 body{
-    height:100vh;
-    width:100%;
     background: #f2f2f2;
     color:#181818;
     font-size: 16px;
     line-height: 24px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
+    box-sizing: border-box;
     overflow-x: hidden;
 }
 .toggle-btn{
@@ -212,4 +234,5 @@ figcaption{
     color:#f2f2f2;
     border: none;
     border-radius: 2px;
+}
 }
