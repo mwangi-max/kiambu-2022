@@ -126,7 +126,7 @@ header{
     position: relative;
 }
 .article{
-    margin: 200px 20px 0 20px;
+    margin: 150px 20px 0 20px;
     text-align: center;
     padding: 20px 10px 0 10px;
     font-size: 20px;
@@ -136,7 +136,7 @@ header{
     padding: 10px 15px;
     background:#8758ff;
     color:#f2f2f2;
-    margin-top:20px;
+    margin-top:10px;
     border-radius: 8px;
     border:none;
     box-shadow: 0 10px 15px #181818;
@@ -204,12 +204,11 @@ figcaption{
 }
 .floating-ad{
     position: fixed;
-    bottom:2%;
+    bottom:10%;
     left:50%;
     transform: translateX(-50%);
-    height:120px;
-    width:200px;
-    padding:2px;
+    height:160px;
+    width:220px;
     border:2px solid #5cb8e4;
     border-radius: 4px;
     background:#5cb8e4;
