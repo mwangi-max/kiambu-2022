@@ -30,7 +30,7 @@ closeAsideBtn.addEventListener('click', ()=>{
 chevronIcons.forEach(icon =>{
     icon.addEventListener('click', ()=>{
         icon.style.transform = 'rotate(180deg)';
-        if(!mcas.classList.contains('seen') || !mps.classList.contains('seen')){
+        if(!(mcas.classList.contains('seen')) || !(mps.classList.contains('seen'))){
             icon.style.transform = 'rotate(0)';  
         }
     })
