@@ -74,7 +74,7 @@ label{
     right:2%;
 }
 .mps,.mcas{
-    margin-left:50px;
+    margin-left:20px;
     overflow-y: auto;
     height:100px;
     display: none;  
