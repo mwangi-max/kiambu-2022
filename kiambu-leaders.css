@@ -1,0 +1,214 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    filter: brightness(0.9);
+}
+body{
+    height:100vh;
+    width:100%;
+    background: #f2f2f2;
+    color:#181818;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+.toggle-btn{
+    position:fixed;
+    top:2%;
+    left:2%;
+}
+label{
+    position:absolute;
+    background:#5cb8e4;
+    height:30px;
+    width:60px;
+    border-radius: 20px;
+}
+#toggle{
+    display: none;
+}
+.small-circle{
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    background:#f2f2f2;
+    margin:5px;
+}
+
+.menu-btn{
+    position:fixed;
+    top:2%;
+    right:2%;
+}
+.mps,.mcas{
+    margin-left:50px;
+    overflow-y: auto;
+    height:100px;
+    display: none;  
+}
+
+.mps.seen,.mcas.seen{
+    display: block;
+}
+li{
+    list-style: none;
+    background:#5cb8e4;
+    margin:5px 0;
+    padding:5px;
+    cursor:pointer;
+}
+.mps > li, .mcas > li{
+    margin:5px;
+    background:#8758ff;
+}
+.main-menu{
+    position:fixed;
+    top:6%;
+    right:2%;
+    height:200px;
+    width:200px;
+    transform: translateX(200%);
+    transition: transform .4s linear;
+}
+.main-menu.show{
+    transform: translateX(0);
+    
+}
+.menu-btn{
+    padding: 4px 6px;
+    background:#8758ff;
+    border:none;
+    border-radius: 2px;
+    cursor:pointer;
+}
+.menu-btn{
+    filter:brightness(0.8);
+}
+header{
+    height:100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.article{
+    margin: 200px 20px 0 20px;
+    text-align: center;
+    padding: 20px 10px 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.main-btn{
+    padding: 10px 15px;
+    background:#8758ff;
+    color:#f2f2f2;
+    margin-top:20px;
+    border-radius: 8px;
+    border:none;
+    box-shadow: 0 10px 15px #181818;
+}
+.background{
+    background: url('/images/IEBC\ CHAIR.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    opacity: .4;
+}
+.preloader{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:url('/multitude.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.preloader.hide{
+    display: none;
+}
+.preloader-heading{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 10px;
+    font-size: 40px;
+    color:#f2f2f2;
+}
+.headings{
+    padding: 10px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #181818;
+}
+.para{
+    margin:5px 10px;
+}
+
+figure{
+    margin:5px;
+    text-align: center;
+}
+figure img{
+    height:200px;
+    width:200px;
+}
+
+figcaption{
+    font-style: italic;
+    color:#8758ff;
+    font-size: 12px;
+}
+.floating-ad{
+    position: fixed;
+    bottom:2%;
+    left:50%;
+    transform: translateX(-50%);
+    height:120px;
+    width:200px;
+    padding:2px;
+    border:2px solid #5cb8e4;
+    border-radius: 4px;
+    background:#5cb8e4;
+    text-align: center;
+    display: none;
+    transition: display .2s ease-in-out;
+    
+}
+.floating-ad.show{
+    display: block;
+}
+.close-aside-btn{
+    padding: 4px 6px;
+    background:#181818;
+    color:#f2f2f2;
+    border:none;
+    border-radius: 2px;
+    margin:4px;
+}
+.reach-out-btn{
+    padding:4px 6px;
+    background:#8758ff;
+    color:#f2f2f2;
+    border: none;
+    border-radius: 2px;
+}
