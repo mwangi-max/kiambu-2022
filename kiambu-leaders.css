@@ -108,11 +108,12 @@ li{
     
 }
 .menu-btn{
-    padding: 4px 6px;
+    padding: 6px 8px;
     background:#8758ff;
     border:none;
     border-radius: 2px;
     cursor:pointer;
+    color: #f2f2f2;
 }
 .menu-btn{
     filter:brightness(0.8);
