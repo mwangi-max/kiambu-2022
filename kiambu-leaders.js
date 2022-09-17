@@ -52,17 +52,13 @@ setInterval(() => {
 }, 1000);
 
 
-// precedingElements.forEach(element =>{
-//     element.addEventListener('click', ()=>{
-//         if(mcas.classList.contains('seen') || mps.classList.contains('seen')){
-//             mcas.classList.remove('seen');
-//             mps.classList.remove('seen');
-//         }
-//         if( navigationMenu.classList.contains('show')){
-//             navigationMenu.classList.remove('show');
-//         }
-//     })
-// })
+window.addEventListener('scroll', ()=>{
+    let verticalScroll = window.scrollY;
+    if(verticalScroll > 400 && navigationMenu.classList.contains('show')){
+        navigationMenu.classList.remove('show');
+        menuBtn.textContent = 'OPEN';
+    }
+})
 
 
 
@@ -106,6 +102,7 @@ precedingElements.forEach(element =>{
             left:0,
             top:position,
         });
+        menuBtn.textContent = 'OPEN';
         if(mcas.classList.contains('seen') || mps.classList.contains('seen')){
                         mcas.classList.remove('seen');
                         mps.classList.remove('seen');
