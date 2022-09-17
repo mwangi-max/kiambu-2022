@@ -250,7 +250,7 @@ figcaption{
 
 /* The sections detailing how each candidate performed */
 /* We'll give each section a height of 100vh and a width of 100% */
-#president,#governor,#gatundu-north,#gatundu-south{
+#president,#governor,#gatundu-north,#gatundu-south,#githunguri,#kabete,#kiambaa,#kiambu,#kikuyu,#lari,#ruiru,#thika,#limuru,#juja{
     height:100vh;
     width:100%;
     margin:20px 0;
