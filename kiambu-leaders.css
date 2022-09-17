@@ -23,7 +23,6 @@ html,body{
     padding:0;
     height:100vh;
     width:100%;
-    /* overflow-x: hidden; */
 }
 
 html{
@@ -155,7 +154,7 @@ li{
     box-shadow: 0 10px 15px #181818;
 }
 .background{
-    background: url('IEBC\ CHAIR.jpg');
+    background: url('IEBC\ CHAIR-SMALL.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -173,7 +172,7 @@ li{
     left:0;
     height:100vh;
     width:100vw;
-    background:url('multitude.jpg');
+    background:url('multitude-small.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
