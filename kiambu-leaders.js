@@ -10,6 +10,8 @@ const preloader = document.querySelector('.preloader');
 const floatingAd = document.querySelector('.floating-ad');
 const closeAsideBtn = document.querySelector('.close-aside-btn');
 const chevronIcons = document.querySelectorAll('.fa');
+const nav = document.querySelector('.nav');
+
 
 
 window.addEventListener('load', ()=>{
@@ -50,14 +52,17 @@ setInterval(() => {
 }, 1000);
 
 
-precedingElements.forEach(element =>{
-    element.addEventListener('click', ()=>{
-        if(mcas.classList.contains('seen') || mps.classList.contains('seen')){
-            mcas.classList.remove('seen');
-            mps.classList.remove('seen');
-        }
-    })
-})
+// precedingElements.forEach(element =>{
+//     element.addEventListener('click', ()=>{
+//         if(mcas.classList.contains('seen') || mps.classList.contains('seen')){
+//             mcas.classList.remove('seen');
+//             mps.classList.remove('seen');
+//         }
+//         if( navigationMenu.classList.contains('show')){
+//             navigationMenu.classList.remove('show');
+//         }
+//     })
+// })
 
 
 
@@ -83,4 +88,30 @@ membersOfCountyAssembly.addEventListener('click', ()=>{
     if(mps.classList.contains('seen')){
         mps.classList.remove('seen');
     }
-})
+});
+
+precedingElements.forEach(element =>{
+    element.addEventListener('click', (e)=>{
+        e.preventDefault();
+
+        const id = e.currentTarget.getAttribute('href').slice(1);
+        
+        const link = document.getElementById(id);
+        const navHeight = nav.getBoundingClientRect().height;
+        let position = link.offsetTop - navHeight;
+        
+        
+        
+        window.scrollTo({
+            left:0,
+            top:position,
+        });
+        if(mcas.classList.contains('seen') || mps.classList.contains('seen')){
+                        mcas.classList.remove('seen');
+                        mps.classList.remove('seen');
+                    }
+                    if( navigationMenu.classList.contains('show')){
+                        navigationMenu.classList.remove('show');
+                    }
+    });
+});
