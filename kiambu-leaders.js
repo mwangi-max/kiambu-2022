@@ -109,6 +109,7 @@ precedingElements.forEach(element =>{
                     }
                     if( navigationMenu.classList.contains('show')){
                         navigationMenu.classList.remove('show');
-                    }
+                    };
+                   
     });
 });

@@ -1,22 +1,3 @@
-html,body{
-    height:100vh;
-    width:100vw;
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-}
-body{
-    background:yellow
-}
-img{
-    height:200px;
-    width:200px;
-}
-
-
-
-@media (max-width:500px) {
-    
 
 html,body{
     margin:0;
@@ -82,6 +63,7 @@ nav.fixed{
     position: fixed;
     top:0;
     left:0;
+    background:#181818;
 }
 .mps,.mcas{
     overflow-y: auto;
@@ -187,7 +169,7 @@ li{
 .preloader-heading{
    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 10px;
-    font-size: 40px;
+    font-size: 20px;
     color:#f2f2f2;
 }
 .headings{
@@ -205,8 +187,42 @@ figure{
     text-align: center;
 }
 figure img{
-    height:200px;
-    width:200px;
+    height:250px;
+    width:250px;
+}
+.picture{
+    text-align: center;
+}
+/* .format{
+    height:250px;
+    width:250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
+.chair{
+    background: url('IEBC\ CHAIR-SMALL.jpg');
+    height:250px;
+    width:250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.ruto-gachagua{
+    background:url('RUTO\ AND\ GACHAGUA-SMALL.jpg');
+    height:250px;
+    width:250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.ruto-swearing{
+    background:url('PRESIDENT\ RUTO\ SWEARING-SMALL.jpg');
+    height:250px;
+    width:250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 figcaption{
@@ -250,7 +266,7 @@ figcaption{
 
 /* The sections detailing how each candidate performed */
 /* We'll give each section a height of 100vh and a width of 100% */
-#president,#governor,#gatundu-north,#gatundu-south,#githunguri,#kabete,#kiambaa,#kiambu,#kikuyu,#lari,#ruiru,#thika,#limuru,#juja{
+#president,#governor,#gatundu-north,#gatundu-south,#githunguri,#kabete,#kiambaa,#kiambu,#kikuyu,#lari,#ruiru,#thika,#limuru,#juja,footer{
     height:100vh;
     width:100%;
     margin:20px 0;
@@ -276,4 +292,149 @@ th{
 tr:nth-child(even){
     background:#5cb8e4;
 }
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.channels{
+    background:black;
+    color:white;
+    padding:2px;
+    margin:2px;
+    font-size: 10px;
+}
+hr{
+    margin:10px 20px;
+    padding-top:10px;
+    color:#8758ff;
+}
+#author{
+    height:100vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    background:#5cb8e4;
+    margin:0;
+    padding-top:5px;
+}
+.footer{
+    background: #181818;
+    color:#f2f2f2;
+    margin:5px;
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+
+@media (max-width:320px){
+    body{
+        font-size: 14px;
+    }
+    .footer{
+        font-size: 14px;
+        padding: 2px 5px;
+    }
+    .headings{
+        font-size: 16px;
+    }
+}
+
+@media (min-width:800px){
+    body{
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: auto;
+    }
+    .main{
+        grid-column: 2/3;
+    }
+    .main-menu{
+        height:300px;
+        width:300px;
+        top:8%;
+    }
+    .background{
+        background: url('IEBC\ CHAIR.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    label{
+        height:40px;
+        width:80px;
+        border-radius: 40px;
+    }
+    .small-circle{
+        height:30px;
+        width:30px;
+        margin:5px;
+    }
+    .menu-btn{
+        padding: 14px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    .preloader{
+        background:url('multitude.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .preloader-heading{
+        font-size: 50px;
+        letter-spacing: 6px;
+    }
+    .article{
+        margin: 200px 50px 0 50px;
+        font-size: 30px;
+        line-height: 45px;
+        letter-spacing: 6px;
+    }
+    .main-btn{
+        padding: 20px 25px;
+        font-size: 18px;
+    }
+    .chair{
+        background: url('IEBC\ CHAIR.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height:350px;
+        width:auto;
+        text-align: center;
+    }
+    .ruto-gachagua{
+        background: url('RUTO\ AND\ GACHAGUA.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height:350px;
+        width:auto;
+        text-align: center;
+    }
+    .ruto-swearing{
+        background: url('PRESIDENT\ RUTO\ SWEARING.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height:350px;
+        width:auto;
+        text-align: center;
+    }
+    figure img{
+        height:300px;
+        width:auto;
+    }
+    
 }
