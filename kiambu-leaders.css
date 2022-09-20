@@ -62,8 +62,9 @@ nav{
 nav.fixed{
     position: fixed;
     top:0;
-    left:0;
     background:#181818;
+    width:100%;
+    overflow:hidden;
 }
 .mps,.mcas{
     overflow-y: auto;
@@ -119,12 +120,17 @@ li{
     filter:brightness(0.8);
 }
 
+
 .article{
-    margin: 150px 20px 0 20px;
+    position:absolute;
+    bottom:10%;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 18px;
     text-align: center;
-    padding: 20px 10px 0 10px;
-    font-size: 20px;
-    font-weight: bold;
+}
+.front{
+    text-align: center;
 }
 .main-btn{
     padding: 10px 15px;
@@ -392,10 +398,9 @@ footer{
         letter-spacing: 6px;
     }
     .article{
-        margin: 200px 50px 0 50px;
         font-size: 30px;
         line-height: 45px;
-        letter-spacing: 6px;
+        font-weight: bold;
     }
     .main-btn{
         padding: 20px 25px;
