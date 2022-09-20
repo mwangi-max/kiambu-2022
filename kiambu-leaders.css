@@ -193,17 +193,15 @@ figure img{
 .picture{
     text-align: center;
 }
-/* .format{
-    height:250px;
-    width:250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-} */
+.format{
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} 
 .chair{
     background: url('IEBC\ CHAIR-SMALL.jpg');
     height:250px;
-    width:250px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -211,7 +209,6 @@ figure img{
 .ruto-gachagua{
     background:url('RUTO\ AND\ GACHAGUA-SMALL.jpg');
     height:250px;
-    width:250px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -219,7 +216,6 @@ figure img{
 .ruto-swearing{
     background:url('PRESIDENT\ RUTO\ SWEARING-SMALL.jpg');
     height:250px;
-    width:250px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
