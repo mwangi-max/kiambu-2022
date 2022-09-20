@@ -126,7 +126,8 @@ li{
     bottom:10%;
     left:50%;
     transform: translateX(-50%);
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
 }
 .front{
