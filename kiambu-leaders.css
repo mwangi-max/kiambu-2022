@@ -10,7 +10,8 @@ html{
     scroll-behavior: smooth;
 }
 a{
-    text-decoration: none;
+   color:white;
+   text-decoration: none;
 }
 a:hover{
     filter: brightness(0.9);
@@ -246,6 +247,7 @@ figcaption{
     text-align: center;
     display: none;
     transition: display .2s ease-in-out;
+    z-index: 10;
     
 }
 .floating-ad.show{
@@ -308,11 +310,6 @@ tr:nth-child(even){
     margin:2px;
     font-size: 10px;
 }
-hr{
-    margin:10px 20px;
-    padding-top:10px;
-    color:#8758ff;
-}
 #author{
     height:100vh;
     width:100%;
@@ -320,6 +317,11 @@ hr{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.kamau{
+    height:400px;
+    width:300px;
 }
 
 footer{
@@ -333,6 +335,9 @@ footer{
     margin:5px;
     border-radius: 5px;
     padding: 4px 8px;
+}
+.small-medium{
+    display: none;
 }
 
 
@@ -444,6 +449,35 @@ footer{
     .floating-ad{
         width:300px;
         padding:10px;
+        }
+        footer{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr auto 0.5fr;
+            padding-top: 50px;
+        }
+        .footer{
+            padding:20px;
+            font-size: 20px;
+        }
+        .small-medium{
+            display: block;
+        }
+        .span{
+            grid-column: 1/-1;
+            grid-row: 3/-1;
+            text-align: center;
+            font-size: 22px;
+            position: relative;
+        }
+        .series{
+            text-decoration: underline;
+        }
+        .end{
+            position:absolute;
+            bottom:10%;
+            left:50%;
+            transform: translateX(-50%);
         }
     
 }
