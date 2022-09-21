@@ -58,6 +58,9 @@ window.addEventListener('scroll', ()=>{
         navigationMenu.classList.remove('show');
         menuBtn.textContent = 'OPEN';
     }
+    if(verticalScroll <= 400 && nav.classList.contains('fixed')){
+        nav.classList.remove('fixed');
+    }
 })
 
 
@@ -86,6 +89,7 @@ membersOfCountyAssembly.addEventListener('click', ()=>{
     }
 });
 
+
 precedingElements.forEach(element =>{
     element.addEventListener('click', (e)=>{
         e.preventDefault();
@@ -96,14 +100,15 @@ precedingElements.forEach(element =>{
         const navHeight = nav.getBoundingClientRect().height;
         let position = link.offsetTop - navHeight;
         
-        
+        nav.classList.add('fixed');
         
         window.scrollTo({
             left:0,
             top:position,
         });
         menuBtn.textContent = 'OPEN';
-        if(mcas.classList.contains('seen') || mps.classList.contains('seen')){
+        
+       if(mcas.classList.contains('seen') || mps.classList.contains('seen')){
                         mcas.classList.remove('seen');
                         mps.classList.remove('seen');
                     }
@@ -112,4 +117,5 @@ precedingElements.forEach(element =>{
                     };
                    
     });
+    
 });
