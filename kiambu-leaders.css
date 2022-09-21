@@ -98,6 +98,7 @@ li{
     width:200px;
     display: none;
     transition: display .4s ease-in-out;
+    z-index: 50;
 }
 .main-menu.show{
     display: block;
