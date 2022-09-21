@@ -1,3 +1,30 @@
+const weekdays = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+];
+
+const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November'
+];
+
+
+
+
 const menuBtn = document.querySelector('.menu-btn');
 const navigationMenu = document.querySelector('.main-menu');
 const membersOfParliament = document.querySelector('.parliament');
@@ -13,6 +40,72 @@ const chevronIcons = document.querySelectorAll('.fa');
 const nav = document.querySelector('.nav');
 const topLink = document.querySelector('.top-link');
 
+const years = document.querySelector('.years');
+const days = document.querySelector('.days');
+const hours = document.querySelector('.hours');
+const minutes = document.querySelector('.minutes');
+const seconds = document.querySelector('.seconds');
+
+const todaysTime = document.querySelector('.todaysTime');
+const ampm = document.querySelector('.amPm');
+
+
+
+
+function countingTime(){
+   
+const today = document.querySelector('.todaysDate');
+const todaysDay = new Date();
+let todaysDate = todaysDay.getDate();
+const todaysWeekday = weekdays[todaysDay.getDay()];
+const todaysMonth = months[todaysDay.getMonth()];
+const todaysFullYear = todaysDay.getFullYear();
+
+today.textContent = `${todaysWeekday}, ${todaysDate} ${todaysMonth} ${todaysFullYear}`
+
+if(todaysDate === 1 || todaysDate === 21 || todaysDate === 31){
+    todaysDate = `${todaysDate}st`
+}
+else if(todaysDate === 2 || todaysDate === 22){
+    todaysDate = `${todaysDate}nd`;
+}
+else if(todaysDate === 3 || todaysDate === 23){
+    todaysDate = `${todaysDate}rd`;
+}
+else{
+       todaysDate = `${todaysDate}th`;
+}
+  let todaysHour = format(todaysDay.getHours());
+  let todaysMinutes = format(todaysDay.getMinutes());
+  let todaysSeconds = format(todaysDay.getSeconds());
+
+   todaysTime.textContent = `${todaysHour}:${todaysMinutes}:${todaysSeconds}`
+   if(todaysHour >= 12){
+       ampm.textContent = 'pm';
+   }
+   else{
+    ampm.textContent = 'am';
+   }
+   if(todaysHour > 12){
+    todaysHour.textContent =`${todaysHour} - 12`;
+   }
+
+
+}
+countingTime();
+setInterval(countingTime,1000);
+
+
+
+
+function format(item){
+    if(item < 10){
+        return item = `0${item}`;
+    }
+    else{
+        return item;
+    }
+}
 
 
 window.addEventListener('load', ()=>{

@@ -272,7 +272,7 @@ figcaption{
 
 /* The sections detailing how each candidate performed */
 /* We'll give each section a height of 100vh and a width of 100% */
-#president,#governor,#gatundu-north,#gatundu-south,#githunguri,#kabete,#kiambaa,#kiambu,#kikuyu,#lari,#ruiru,#thika,#limuru,#juja,footer{
+#president,#governor,#gatundu-north,#gatundu-south,#githunguri,#kabete,#kiambaa,#kiambu,#kikuyu,#lari,#ruiru,#thika,#limuru,#juja,footer,#time-remaining{
     height:100vh;
     width:100%;
     margin:20px 0;
@@ -358,8 +358,34 @@ footer{
     color:#8758ff;
     text-decoration: underline;
 }
+.series{
+    text-decoration: underline;
+}
+.first{
+    display: inline-block;
+}
+.time-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.second{
+    margin:0 1px;
+    background:#181818;
+    color:#f2f2f2;
+    padding: 4px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
+/* Smaller screens starts here */
+
+
+
+/* Below 320px in width */
 @media (max-width:320px){
     body{
         font-size: 14px;
@@ -373,6 +399,8 @@ footer{
     }
 }
 
+
+/* Above 800px in screen width */
 @media (min-width:800px){
     body{
         font-size: 18px;
@@ -489,9 +517,7 @@ footer{
             font-size: 22px;
             position: relative;
         }
-        .series{
-            text-decoration: underline;
-        }
+        
         .end{
             position:absolute;
             bottom:10%;
