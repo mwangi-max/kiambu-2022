@@ -11,6 +11,7 @@ const floatingAd = document.querySelector('.floating-ad');
 const closeAsideBtn = document.querySelector('.close-aside-btn');
 const chevronIcons = document.querySelectorAll('.fa');
 const nav = document.querySelector('.nav');
+const topLink = document.querySelector('.top-link');
 
 
 
@@ -60,6 +61,12 @@ window.addEventListener('scroll', ()=>{
     }
     if(verticalScroll <= 400 && nav.classList.contains('fixed')){
         nav.classList.remove('fixed');
+    }
+    if(verticalScroll > 500){
+        topLink.classList.add('visible');
+    }
+    else{
+        topLink.classList.remove('visible');
     }
 })
 

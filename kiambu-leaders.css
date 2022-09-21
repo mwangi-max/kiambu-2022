@@ -339,6 +339,20 @@ footer{
 .small-medium{
     display: none;
 }
+.top-link{
+    position: fixed;
+    bottom:7%;
+    right:7%;
+    background:#181818;
+    color:#f2f2f2;
+    padding:10px;
+    border-radius: 5px;
+    z-index: 5;
+    visibility: hidden;
+}
+.top-link.visible{
+    visibility: visible;
+}
 
 
 @media (max-width:320px){
