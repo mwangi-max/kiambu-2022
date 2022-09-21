@@ -353,6 +353,10 @@ footer{
 .top-link.visible{
     visibility: visible;
 }
+.inline-links{
+    color:#8758ff;
+    text-decoration: underline;
+}
 
 
 @media (max-width:320px){
