@@ -39,6 +39,8 @@ const closeAsideBtn = document.querySelector('.close-aside-btn');
 const chevronIcons = document.querySelectorAll('.fa');
 const nav = document.querySelector('.nav');
 const topLink = document.querySelector('.top-link');
+const assemblyIcon = document.querySelector('.assembly-icon');
+const parliamentIcon = document.querySelector('.parliament-icon');
 
 const years = document.querySelector('.years');
 const days = document.querySelector('.days');
@@ -63,13 +65,13 @@ const todaysFullYear = todaysDay.getFullYear();
 
 today.textContent = `${todaysWeekday}, ${todaysDate} ${todaysMonth} ${todaysFullYear}`
 
-if(todaysDate === 1 || todaysDate === 21 || todaysDate === 31){
+if(todaysDate == 1 || todaysDate == 21 || todaysDate == 31){
     todaysDate = `${todaysDate}st`
 }
-else if(todaysDate === 2 || todaysDate === 22){
+else if(todaysDate == 2 || todaysDate == 22){
     todaysDate = `${todaysDate}nd`;
 }
-else if(todaysDate === 3 || todaysDate === 23){
+else if(todaysDate == 3 || todaysDate == 23){
     todaysDate = `${todaysDate}rd`;
 }
 else{
@@ -85,10 +87,56 @@ else{
    }
    else{
     ampm.textContent = 'am';
-   }
+   };
    if(todaysHour > 12){
-    todaysHour.textContent =`${todaysHour} - 12`;
-   }
+    todaysHour = `${todaysHour}-12`;
+   };
+
+
+   const futureTime = new Date(2027,7,9,06,00,00);
+   const deviation = futureTime - todaysDay;
+   
+//    1second = 1000ms;
+//    1minute = 60seconds;
+//    1hour = 60minutes;
+//    1day = 24hours;
+//    1year = 365days;
+
+// one year in milliseconds;
+const oneYear = 365*24*60*60*1000;
+
+// one day in milliseconds;
+const oneDay = 24*60*60*1000;
+
+// one hour in milliseconds;
+const oneHour = 60*60*1000;
+
+// one minute in milliseconds;
+const oneMinute = 60*1000;
+
+// one second in milliseconds;
+const oneSecond = 1*1000;
+
+
+const yearsLeft = format(Math.floor(deviation/oneYear));
+
+const daysLeft = format(Math.floor((deviation % oneYear)/oneDay));
+
+
+const hoursLeft = format(Math.floor((deviation % oneDay)/oneHour));
+
+
+const minutesLeft = format(Math.floor((deviation % oneHour)/oneMinute));
+
+
+const secondsLeft = format(Math.floor((deviation % oneMinute)/oneSecond));
+
+
+years.textContent = yearsLeft;
+days.textContent = daysLeft;
+hours.textContent = hoursLeft;
+minutes.textContent = minutesLeft;
+seconds.textContent = secondsLeft;
 
 
 }
@@ -123,12 +171,7 @@ closeAsideBtn.addEventListener('click', ()=>{
     }
 })
 
-chevronIcons.forEach(icon =>{
-    icon.addEventListener('click', ()=>{
-        icon.classList.toggle('rotate');
-       
-    })
-})
+
 
 
 
@@ -183,6 +226,7 @@ menuBtn.addEventListener('click', ()=>{
 })
 membersOfParliament.addEventListener('click', ()=>{
     mps.classList.toggle('seen');
+    parliamentIcon.classList.toggle('rotate');
     if(mcas.classList.contains('seen')){
         mcas.classList.remove('seen');
     };
@@ -190,6 +234,7 @@ membersOfParliament.addEventListener('click', ()=>{
 
 membersOfCountyAssembly.addEventListener('click', ()=>{
     mcas.classList.toggle('seen');
+    assemblyIcon.classList.toggle('rotate');
     if(mps.classList.contains('seen')){
         mps.classList.remove('seen');
     }

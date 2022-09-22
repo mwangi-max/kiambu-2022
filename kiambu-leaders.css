@@ -362,25 +362,35 @@ footer{
     text-decoration: underline;
 }
 .first{
-    display: inline-block;
+    display: inline;
+}
+.todaysDate, .todaysTime{
+    color:#8758ff;
 }
 .time-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .second{
-    margin:0 1px;
+    margin:0 2px;
     background:#181818;
     color:#f2f2f2;
-    padding: 4px 2px;
+    padding: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 .rotate{
     transform: rotate(180deg);
+}
+.below{
+    background:#8758ff;
+    color:#f2f2f2;
+    padding:2px;
 }
 
 
@@ -399,6 +409,13 @@ footer{
     }
     .headings{
         font-size: 16px;
+    }
+    .first{
+        display:inline;
+    }
+    .second{
+        margin:0 1px;
+        padding:2px;
     }
 }
 
