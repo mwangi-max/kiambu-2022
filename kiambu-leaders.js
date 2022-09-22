@@ -161,6 +161,12 @@ window.addEventListener('scroll', ()=>{
     else{
         topLink.classList.remove('visible');
     }
+    if(verticalScroll > 500){
+        nav.classList.add('fixed');
+    }
+    else{
+        nav.classList.remove('fixed');
+    }
 })
 
 
@@ -200,9 +206,8 @@ precedingElements.forEach(element =>{
         const navHeight = nav.getBoundingClientRect().height;
         let position = link.offsetTop - navHeight;
         
-        nav.classList.add('fixed');
         
-        window.scrollTo({
+         window.scrollTo({
             left:0,
             top:position,
         });
