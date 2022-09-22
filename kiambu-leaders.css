@@ -346,8 +346,8 @@ footer{
     right:7%;
     background:#181818;
     color:#f2f2f2;
-    padding:10px;
-    border-radius: 5px;
+    padding:5px;
+    border-radius: 2px;
     z-index: 5;
     visibility: hidden;
 }
@@ -378,6 +378,9 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.rotate{
+    transform: rotate(180deg);
 }
 
 
@@ -523,6 +526,10 @@ footer{
             bottom:10%;
             left:50%;
             transform: translateX(-50%);
+        }
+        .top-link{
+            padding:10px;
+            border-radius: 5px;
         }
     
 }

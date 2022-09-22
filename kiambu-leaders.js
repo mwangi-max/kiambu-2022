@@ -125,7 +125,7 @@ closeAsideBtn.addEventListener('click', ()=>{
 
 chevronIcons.forEach(icon =>{
     icon.addEventListener('click', ()=>{
-        icon.style.transform = 'rotate(180deg)';
+        icon.classList.toggle('rotate');
        
     })
 })
@@ -155,7 +155,7 @@ window.addEventListener('scroll', ()=>{
     if(verticalScroll <= 400 && nav.classList.contains('fixed')){
         nav.classList.remove('fixed');
     }
-    if(verticalScroll > 500){
+    if(verticalScroll > 800){
         topLink.classList.add('visible');
     }
     else{
