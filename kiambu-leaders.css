@@ -327,8 +327,10 @@ tr:nth-child(even){
 
 footer{
     background:#5cb8e4;
-    margin:0;
-    padding-top:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .footer{
     background: #181818;
@@ -362,9 +364,6 @@ footer{
     text-decoration: underline;
 }
 .first{
-    display: inline;
-}
-.todaysDate, .todaysTime{
     color:#8758ff;
 }
 .time-container{
@@ -374,7 +373,7 @@ footer{
     flex-wrap: wrap;
 }
 .second{
-    margin:0 2px;
+    margin:2px;
     background:#181818;
     color:#f2f2f2;
     padding: 4px;
@@ -410,12 +409,12 @@ footer{
     .headings{
         font-size: 16px;
     }
-    .first{
-        display:inline;
-    }
     .second{
-        margin:0 1px;
+        margin:2px;
         padding:2px;
+    }
+    hr{
+        margin:5px 10px;
     }
 }
 
@@ -522,6 +521,7 @@ footer{
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr auto 0.5fr;
             padding-top: 50px;
+            margin:0 auto;
         }
         .footer{
             padding:20px;
@@ -548,5 +548,14 @@ footer{
             padding:10px;
             border-radius: 5px;
         }
+        .second{
+            margin:5px;
+            padding:5px;
+        }
+        .below{
+          padding:5px;
+        }
+        
+
     
 }

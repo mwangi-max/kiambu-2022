@@ -41,6 +41,7 @@ const nav = document.querySelector('.nav');
 const topLink = document.querySelector('.top-link');
 const assemblyIcon = document.querySelector('.assembly-icon');
 const parliamentIcon = document.querySelector('.parliament-icon');
+const footer = document.getElementById('footer');
 
 const years = document.querySelector('.years');
 const days = document.querySelector('.days');
@@ -51,6 +52,11 @@ const seconds = document.querySelector('.seconds');
 const todaysTime = document.querySelector('.todaysTime');
 const ampm = document.querySelector('.amPm');
 
+const nextDate = document.querySelector('.nextDate');
+const nextTime = document.querySelector('.nextTime');
+
+const navHeight = nav.getBoundingClientRect().height;
+
 
 
 
@@ -58,25 +64,28 @@ function countingTime(){
    
 const today = document.querySelector('.todaysDate');
 const todaysDay = new Date();
-let todaysDate = todaysDay.getDate();
+const todaysDate = concate(todaysDay.getDate());
 const todaysWeekday = weekdays[todaysDay.getDay()];
 const todaysMonth = months[todaysDay.getMonth()];
 const todaysFullYear = todaysDay.getFullYear();
 
 today.textContent = `${todaysWeekday}, ${todaysDate} ${todaysMonth} ${todaysFullYear}`
 
-if(todaysDate == 1 || todaysDate == 21 || todaysDate == 31){
-    todaysDate = `${todaysDate}st`
+function concate(item){
+if(item == 1 || item == 21 || item == 31){
+    return item  = `${item}st`
 }
-else if(todaysDate == 2 || todaysDate == 22){
-    todaysDate = `${todaysDate}nd`;
+else if(item == 2 || item == 22){
+    return item = `${item}nd`;
 }
-else if(todaysDate == 3 || todaysDate == 23){
-    todaysDate = `${todaysDate}rd`;
+else if(item == 3 || item == 23){
+    return item = `${item}rd`;
 }
 else{
-       todaysDate = `${todaysDate}th`;
+       return item = `${item}th`;
 }
+};
+
   let todaysHour = format(todaysDay.getHours());
   let todaysMinutes = format(todaysDay.getMinutes());
   let todaysSeconds = format(todaysDay.getSeconds());
@@ -94,6 +103,17 @@ else{
 
 
    const futureTime = new Date(2027,7,9,06,00,00);
+   const futureDay = weekdays[futureTime.getDay()];
+   const futureDate = concate(futureTime.getDate());
+   const futureMonth = months[futureTime.getMonth()];
+   const futureFullYear = futureTime.getFullYear();
+   const futureHour = format(futureTime.getHours());
+   const futureMinutes = format(futureTime.getMinutes());
+
+   nextDate.textContent = `${futureDay}, ${futureDate} ${futureMonth} ${futureFullYear}`;
+   nextTime.textContent = `${futureHour}:${futureMinutes}`
+
+
    const deviation = futureTime - todaysDay;
    
 //    1second = 1000ms;
@@ -197,20 +217,30 @@ window.addEventListener('scroll', ()=>{
     }
     if(verticalScroll <= 400 && nav.classList.contains('fixed')){
         nav.classList.remove('fixed');
-    }
-    if(verticalScroll > 800){
+    };
+    if(verticalScroll > 4000){
         topLink.classList.add('visible');
     }
     else{
         topLink.classList.remove('visible');
     }
+                //     const footerPosition = footer.offsetTop - navHeight;
+                //     console.log(footerPosition)
+                // if(footerPosition === 35000){
+                //     topLink.classList.add('visible');
+                // }
+                // else{
+                //     topLink.classList.remove('visible');
+                // }
     if(verticalScroll > 500){
         nav.classList.add('fixed');
     }
     else{
         nav.classList.remove('fixed');
     }
-})
+});
+
+
 
 
 
@@ -229,6 +259,7 @@ membersOfParliament.addEventListener('click', ()=>{
     parliamentIcon.classList.toggle('rotate');
     if(mcas.classList.contains('seen')){
         mcas.classList.remove('seen');
+        assemblyIcon.classList.toggle('rotate');
     };
 });
 
@@ -237,6 +268,7 @@ membersOfCountyAssembly.addEventListener('click', ()=>{
     assemblyIcon.classList.toggle('rotate');
     if(mps.classList.contains('seen')){
         mps.classList.remove('seen');
+        parliamentIcon.classList.toggle('rotate');
     }
 });
 
@@ -248,7 +280,7 @@ precedingElements.forEach(element =>{
         const id = e.currentTarget.getAttribute('href').slice(1);
         
         const link = document.getElementById(id);
-        const navHeight = nav.getBoundingClientRect().height;
+      
         let position = link.offsetTop - navHeight;
         
         
