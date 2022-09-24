@@ -56,6 +56,37 @@ const nextDate = document.querySelector('.nextDate');
 const nextTime = document.querySelector('.nextTime');
 
 const navHeight = nav.getBoundingClientRect().height;
+const input = document.querySelector('.input');
+const body = document.getElementById('body');
+const headings = document.querySelectorAll('.headings');
+
+input.checked = JSON.parse(localStorage.getItem('toggle'));
+changeBody();
+
+function changeBody(){
+    if(input.checked){
+        body.style.backgroundColor = '#181818';
+        body.style.color = '#f2f2f2';
+        headings.forEach(heading=>{
+            heading.style.color = '#f2f2f2'
+        })
+    }
+    else{
+        body.style.backgroundColor = '#f2f2f2';
+        body.style.color = '#181818';
+        headings.forEach(heading=>{
+            heading.style.color = '#181818'
+        })
+    }
+}
+input.addEventListener('input', ()=>{
+    changeBody();
+    store();
+});
+
+function store(){
+    localStorage.setItem('toggle', JSON.stringify(input.checked));
+}
 
 
 

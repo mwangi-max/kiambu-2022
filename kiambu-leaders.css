@@ -6,9 +6,15 @@ html,body{
     width:100%;
 }
 
+
 html{
     scroll-behavior: smooth;
 }
+
+body{
+    transition: .3s;
+}
+
 a{
    color:white;
    text-decoration: none;
@@ -51,6 +57,33 @@ label{
     border-radius: 50%;
     background:#f2f2f2;
     margin:5px;
+    animation: toggleOff .4s linear forwards;
+}
+.input:checked + .label{
+    background:#8758ff;
+}
+
+.input:checked + .label .small-circle{
+    background: #181818;
+    animation: toggleOn .4s linear forwards;
+}
+
+
+@keyframes toggleOn {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(34px);
+    }
+}
+@keyframes toggleOff {
+    0%{
+        transform: translateX(35px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 nav{
     display: flex;
