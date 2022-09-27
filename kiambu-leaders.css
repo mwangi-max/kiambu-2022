@@ -52,6 +52,7 @@ label{
     display: none;
 }
 .small-circle{
+    display: block;
     height:20px;
     width:20px;
     border-radius: 50%;
@@ -176,6 +177,8 @@ li{
     border-radius: 8px;
     border:none;
     box-shadow: 0 10px 15px #181818;
+    font-size: 16px;
+    white-space: nowrap;
 }
 .background{
     background: url('IEBC\ CHAIR-SMALL.jpg');
@@ -221,7 +224,7 @@ li{
     color: #181818;
 }
 .para{
-    margin:5px 10px;
+    margin:20px;
 }
 
 figure{
