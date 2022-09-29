@@ -423,7 +423,7 @@ tr:nth-child(even){
     padding:2px;
 }
 .fab{
-    font-size: 50px;
+    font-size: 20px;
     color:#8758ff;
 }
 .channels{
@@ -451,9 +451,6 @@ tr:nth-child(even){
     .second{
         margin:2px;
         padding:2px;
-    }
-    hr{
-        margin:5px 10px;
     }
 }
 
@@ -557,6 +554,10 @@ tr:nth-child(even){
     .floating-ad{
         width:300px;
         padding:10px;
+        }
+        .fab{
+            font-size: 50px;
+            color:#8758ff;
         }
         #footer{
             display: grid;

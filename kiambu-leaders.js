@@ -126,11 +126,9 @@ else{
        ampm.textContent = 'pm';
    }
    else{
-    ampm.textContent = 'am';
+      ampm.textContent = 'am';
    };
-   if(todaysHour > 12){
-    todaysHour = `${todaysHour}-12`;
-   };
+
 
 
    const futureTime = new Date(2027,7,9,06,00,00);
