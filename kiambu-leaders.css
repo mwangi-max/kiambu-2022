@@ -361,8 +361,9 @@ tr:nth-child(even){
     width:300px;
 }
 
-footer{
+#footer{
     background:#5cb8e4;
+    height:100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -466,6 +467,9 @@ footer{
         grid-template-columns: 0.5fr 1fr 0.5fr;
         grid-template-rows: auto;
     }
+    nav{
+        height:60px;
+    }
     .main{
         grid-column: 2/3;
     }
@@ -552,14 +556,14 @@ footer{
         width:300px;
         padding:10px;
         }
-        footer{
+        #footer{
             display: grid;
-            place-items: center;
-            align-items: center;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr auto 0.5fr;
             padding-top: 50px;
             margin:0 auto;
+            position: relative;
+            
         }
         .footer{
             padding:20px;
@@ -573,14 +577,11 @@ footer{
             grid-row: 3/-1;
             text-align: center;
             font-size: 22px;
-            position: relative;
-        }
-        
-        .end{
-            position:absolute;
+            position: absolute;
             bottom:10%;
             left:50%;
             transform: translateX(-50%);
+            
         }
         .top-link{
             padding:10px;
