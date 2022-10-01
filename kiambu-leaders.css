@@ -373,6 +373,9 @@ tr:nth-child(even){
     border-radius: 5px;
     padding: 4px;
 }
+.second{
+    border-radius: 10px;
+}
 .footer .para{
     margin:0 2px;
     padding: 0 2px;
@@ -381,6 +384,9 @@ tr:nth-child(even){
     position: absolute;
     bottom:0;
     text-align: center;
+}
+.small-medium{
+    display: none;
 }
 .top-link{
     position: fixed;
