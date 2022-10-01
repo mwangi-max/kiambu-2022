@@ -377,9 +377,6 @@ tr:nth-child(even){
     margin:0 2px;
     padding: 0 2px;
 }
-.small-medium{
-    display: none;
-}
 .span{
     position: absolute;
     bottom:0;
