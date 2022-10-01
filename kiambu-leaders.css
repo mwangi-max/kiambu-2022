@@ -169,6 +169,11 @@ li{
 .front{
     text-align: center;
 }
+.small{
+    white-space: nowrap;
+    margin:0;
+    padding:0;
+}
 .main-btn{
     padding: 10px 15px;
     background:#8758ff;
