@@ -309,8 +309,8 @@ figcaption{
 /* The sections detailing how each candidate performed */
 /* We'll give each section a height of 100vh and a width of 100% */
 #president,#governor,#gatundu-north,#gatundu-south,#githunguri,#kabete,#kiambaa,#kiambu,#kikuyu,#lari,#ruiru,#thika,#limuru,#juja,footer,#time-remaining{
-    height:100vh;
-    width:100%;
+    min-height:100vh;
+    min-width:100%;
     margin:20px 0;
     
 }
@@ -344,10 +344,10 @@ tr:nth-child(even){
 #author{
     height:100vh;
     width:100%;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 
 .kamau{
@@ -357,8 +357,14 @@ tr:nth-child(even){
 
 #footer{
     background:#5cb8e4;
-    height:100vh;
-    width:100%;
+    min-height:100vh;
+    min-width:100%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 .footer{
     background: #181818;
@@ -367,8 +373,17 @@ tr:nth-child(even){
     border-radius: 5px;
     padding: 4px;
 }
+.footer .para{
+    margin:0 2px;
+    padding: 0 2px;
+}
 .small-medium{
     display: none;
+}
+.span{
+    position: absolute;
+    bottom:0;
+    text-align: center;
 }
 .top-link{
     position: fixed;
