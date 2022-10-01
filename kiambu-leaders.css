@@ -257,7 +257,7 @@ figure img{
     background-position: center;
 }
 .ruto-gachagua{
-    background:url('RUTO\ AND\ GACHAGUA-SMALL.jpg');
+    background:url('ruto-gachagua-receiving-certificate-from-iebc.jpg');
     height:250px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -517,7 +517,7 @@ tr:nth-child(even){
         height:70px;
     }
     .menu-btn{
-        padding: 14px;
+        padding: 10px 14px;
         border-radius: 10px;
         font-size: 18px;
     }
@@ -550,7 +550,7 @@ tr:nth-child(even){
         text-align: center;
     }
     .ruto-gachagua{
-        background: url('RUTO\ AND\ GACHAGUA.jpg');
+        background: url('ruto-gachagua-receiving-certificate-from-iebc.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -578,6 +578,7 @@ tr:nth-child(even){
         .fab{
             font-size: 50px;
             color:#8758ff;
+            cursor: pointer;
         }
         #footer{
             position: relative;
